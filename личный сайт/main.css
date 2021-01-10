@@ -1,0 +1,290 @@
+*{
+box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+
+}
+body{
+margin: 0; /*чтобы убрать отступы снаружи. и прикрепить к стенке сверху и сбоку */
+font-family: 'Montserrat', sans-serif;
+}
+img{
+    max-width: 100%; /*чтоб все картинки при изменении контейнара изменяли и картинки*/
+}
+.container{
+max-width: 1140px;
+margin-left: auto; /*вырвынивает в центр  по горизонтали*/
+margin-right: auto;
+padding-left: 15px;
+padding-right: 15px;
+}
+
+/* header */
+.header{
+position: relative;
+display: flex; /*чтобы они выравнились в ряд */
+flex-direction: column; /*чтобы они встали в одну колонку, получается оснавная ось У */
+justify-content: center;/*выравнивание по основной оси..чтобы выравнить по оси У */
+align-items: center; /* выравнивание по перечной оси..чтобы выравнить по оси Х */
+
+width: 100%;
+height: 100vh;/*vh это высота всего экрана.  а если бы % то высота будет равна контенту, т.е сколько инфо внутри дива такя же и будет и высота  */
+
+/* background-color: #335988; 
+background-image: url(./img/header-body);  */
+background-size: cover;  /*картинка заполнится на весь экран*/
+background-position: center;
+
+}
+
+
+.header-title{
+margin: 0;
+margin-bottom: 25px;
+
+font-weight: 700;
+font-size: 56px;
+line-height: 130%;
+
+text-align: center;
+color: #ffffff;
+}
+
+.header-subtitle{
+margin: 0;
+
+font-weight: bold;
+font-size: 16px;
+line-height: 150%;
+text-align: center;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: #ffffff;
+}
+
+.header-arrow{
+width: 48px;
+height: 48px;
+/* background-color: red; */
+/* чтоб вытащить его из общего контента используем position absolute  */
+position: absolute;
+bottom: 0;
+
+left: 50%;
+transform: translate(-50% 0%);
+color: #ffffff;
+
+}
+.none{
+display: none;
+}
+/* portfolio */
+.portfolio {
+/* background-color: darkgreen; */
+padding-top: 80px;
+padding-bottom: 115px;
+}
+.section-header{
+margin-bottom: 70px;
+margin: 0;
+margin-bottom: 70px;
+font-weight: 700px;
+font-size: 46px;
+line-height: 130%;
+text-align: center;
+color: #000000;
+}
+.portfolio-cards-wrapper{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.card{
+margin-bottom: 30px;
+max-width: 540px;
+background-color: #fff;
+box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.35) ;
+transition: transform 0.2s ease-in; /*при навидении будет подниматься вверх плавно*/
+}
+.card:hover{
+transform: translateY(-15px);/*при навидении будет подниматься вверх*/
+
+}
+.card-link{
+display: block;
+color: black;
+padding: 20px;
+text-decoration: none;
+transition: color 0.2s ease-in; /*при навидении будет менять цвет медленно на 2 сек */
+
+}
+.card-link:hover{
+color: rgb(39, 91, 236); /*при навидении будет менять цвет */
+} 
+
+.card:last-child
+,.card:nth-last-child(2){
+margin-bottom: 0;
+}
+.card-img{
+margin-bottom: 20px;
+/* margin-left: 90px; */
+
+}
+.card-title{
+margin: 0;
+margin-bottom: 13px;
+
+font-weight: 600;
+font-size: 20px;
+line-height: 130%;
+/* color: #000000; */
+margin-left: 90px;
+}
+.card p{
+margin: 0;
+font-size: 14px;
+line-height: 130%;
+/* color: #000; */
+margin-left: 90px;
+}
+
+/* Footer */
+.footer{
+padding-top: 45px;
+padding-bottom: 130px;
+background-color: #1E4776;
+color: white;
+}
+.footer-raw{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+.footer-col{
+max-width: 350px;
+flex-grow: 1;
+}
+.footer-copyright{
+color: #7e9ec9;
+line-height: 1.3;
+
+}
+.footer-copyright-name{
+font-weight: 700;
+font-size: 28px;
+margin-bottom: 15px;
+
+}
+.footer-copyright p{
+margin: 0;
+margin-bottom: 15px;
+font-weight: 600;
+font-size: 16px;
+
+}
+
+
+.footer-icons p{
+font-weight: 600;
+font-size: 16px;
+line-height: 1.3;
+}
+.footer-icons-raw{
+display: flex;
+align-items: center;
+
+}
+.footer-icons-raw > * + *{    /*соседа от сылки +. т.к у первого сылка нет соседа с лева на него эти стили небудет работать */
+margin-left: 30px;
+}
+
+
+.footer-button{
+/*за высоту*/
+display: inline-block;
+height: 50px;
+padding-left: 30px;
+padding-right: 30px;
+/* padding-top: 11px; */
+border: 3px solid #ffffff;
+border-radius: 50px;
+/*отвечает за текст*/
+color: white;
+font-weight: 700;
+font-size: 16px;
+line-height: 44px;
+text-transform: uppercase;
+text-decoration: none;
+transition: all 0.2s ease-in;
+
+
+}
+.footer-button:hover{
+background-color: white;
+color: #1e4776;
+}
+.footer-contacts p{
+margin: 15px 0 ;
+font-size: 16px;
+line-height: 1.3;
+color: #7e9ec9;
+}
+
+/* project */
+.project{
+padding-top: 80px;
+padding-bottom: 12px;
+text-align: center;
+color: #000;
+
+}
+.project-header{
+margin: 0;
+margin-bottom: 40px;
+font-weight: bold;
+font-size: 46px;
+line-height: 1.3;
+
+}
+.project-img{
+margin-bottom: 70px;
+}
+.project-description{
+max-width: 730px;
+margin-bottom: 60px;
+margin: 0 auto;
+
+}
+.project-description p{
+margin-top: 0;
+
+font-size: 16px;
+line-height: 1.5;
+
+}
+.project-btn-back{
+/*за высоту*/
+display: inline-block;
+height: 60px;
+padding-left: 30px;
+padding-right: 30px;
+/* padding-top: 11px; */
+border: 3px solid #275bec;
+border-radius: 50px;
+/*отвечает за текст*/
+color: #275bec;
+font-weight: 700;
+font-size: 16px;
+line-height: 54px;
+text-transform: uppercase;
+text-decoration: none;
+margin-bottom: 130px;
+transition: all 0.2s ease-in;
+}
+
+.project-btn-back:hover{
+background-color: #275bec;
+color: white;
+}
